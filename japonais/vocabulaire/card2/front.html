@@ -1,0 +1,73 @@
+
+<div class="japanese-translation">{{furigana::furigana-plain}}
+		
+    <div id="bubbles">
+    </div>
+    
+    </div>
+    
+    <script>
+            /*function colorchange() {
+                const kanjiElement = document.getElementById("kanjiElement");
+                const glossary = "{{text:glossary}}"
+        
+                if (glossary.includes('(adj')) {
+                    kanjiElement.classList.add('adj-background');
+                } else if (glossary.includes('v1') || glossary.includes('v5')) {
+                    kanjiElement.classList.add('verb-background');
+                } else if (glossary.includes('(n')) {
+                    kanjiElement.classList.add('noun-background');
+                } else if (glossary.includes('(ctr')) {
+                    kanjiElement.classList.add('counter-background');
+                } else if (glossary.includes('(adv')) {
+                    kanjiElement.classList.add('adverb-background');
+                } else {
+                    kanjiElement.classList.add('default-background');
+                }
+        }
+            colorchange();*/
+             
+      function createBubbles() {
+            text = `{{text::glossary}}`;
+    
+            const regex = /\(([^)]+) JMdict \(French\)\)/g;
+            let match;
+            const bubblesDiv = document.getElementById('bubbles');
+            const valuesSet = new Set();
+    
+            while ((match = regex.exec(text)) !== null) {
+                const extractedValue = match[1].trim();
+             
+                    const values = extractedValue.split(',').map(value => value.trim());
+                    values.forEach(value => {
+                                        if (value !== '') {
+                        valuesSet.add(value);
+                                    }
+                    });
+            }
+            valuesSet.forEach(value => {
+                const bubble = document.createElement('div');
+                           if (value.includes('adj')) {
+                                        bubble.className = 'bubble-adj';  
+                } else if (value.includes('v1') || value.includes('vi') || value.includes('vs') || value.includes('vt') ||value.includes('vs-s') || value.includes('v5')) {
+                    bubble.className = 'bubble-verb';
+                }  else if (value.includes('ctr')) {
+                    bubble.className = 'bubble-counter';
+                } else if (value.includes('adv')) {
+                    bubble.className = 'bubble-adverb';
+                } else if (value.includes('int')){
+                                bubble.className = 'bubble-interjection';
+                }　else if (value.includes('n')) {
+                    bubble.className = 'bubble-noun';
+                } else {
+                                bubble.className = 'bubble-default';
+                } 
+                bubble.textContent = value;
+                bubblesDiv.appendChild(bubble);
+            });
+        }
+    
+        // Execute the function when the card is loaded
+        createBubbles();  
+    
+    </script>

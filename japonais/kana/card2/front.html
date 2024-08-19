@@ -1,0 +1,28 @@
+<div class="frame" id="frameId">
+    <div id="KanaType"></div>
+  </div>
+  
+  <script>
+    function displayTextBasedOnTags() {
+      const displayDiv = document.getElementById('KanaType');
+      const tags = "{{Tags}}"; // Get the tags associated with the card
+      const frame = document.getElementById('frameId'); // Select the frame element
+  
+      if (tags.includes("Hiragana")) {
+        frame.classList.add('frame-hiragana');
+        displayDiv.innerHTML = "Hiragana </br> {{Kanji}}";
+      } else if (tags.includes("katakana")) {
+        frame.classList.add('frame-katakana');
+        displayDiv.innerHTML = "Katakana</br> {{Kanji}}";
+      } else {
+        frame.classList.add('frame-default');
+        displayDiv.innerHTML = "{{Definition}}";
+      }
+    }
+  
+    displayTextBasedOnTags();
+  </script>
+  
+  
+  
+  <script defer src="_ajt_japanese.js"></script>

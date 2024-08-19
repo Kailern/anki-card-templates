@@ -1,0 +1,28 @@
+
+
+<div class="translation">
+    <div class="label">Traduction:</div>
+    <div class="text">{{glossary-brief}}</div>
+</div>
+        {{#synonym}}
+<div id="SynonymSection" class="synonym-section">
+  <div class="synonym-label">Synonym:</div>
+
+  <div class="synonym-value">{{furigana::synonym}}</div>
+
+</div>
+        {{/synonym}}
+
+
+<script>
+function shuffleList() {
+var list = document.querySelector('ol') || document.querySelector('ul');
+if (list) {
+    for (var i = list.children.length; i >= 0; i--) {
+        list.appendChild(list.children[Math.floor(Math.random() * i)]);
+    }
+} 
+}
+
+shuffleList();
+</script>

@@ -1,13 +1,13 @@
 {{FrontSide}}
 
+<div class="card">
 <hr id=answer>
-
  <div class="verbal-form-answer">
 <span>{{conjugaison}}<span>
 </div>
 <hr id=answer>
-
 <div class="example">
 <span class="label">{{exemple}}<span>
 <div>
+</div>
 </div>

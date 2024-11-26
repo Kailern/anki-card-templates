@@ -1,0 +1,5 @@
+<div class="card">
+<div class="header">Kanji </br><div class="header-onyomi">Onyomi</div>
+<div class="kanji">{{Kanji}}</div>
+</div>
+<script defer src="_ajt_japanese.js"></script>

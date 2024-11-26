@@ -3,8 +3,8 @@
 /* Update the following media query to suit iPhone 15 or similar device */
 @media only screen and (max-width: 428px) {
   .card {
-    margin: 5px;
-    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
   }
 }
 .card {
@@ -13,91 +13,22 @@
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
   max-width: 100%;
   box-sizing: border-box;
   touch-action: manipulation;
 }
 
-/* Define classes for different tag colors */
-.frame-hiragana {
-  background-color: #6D689C;
-  font-size: 64px;
-  
-  /* Add other styling properties for the red frame */
-}
-
-
-.frame-katakana {
-  background-color: #7E9C68;
-  font-size: 64px;
-  
-  /* Add other styling properties for the blue frame */
-}
-
-.frame-default {
-  background-color: grey; /* Change 'grey' to your default color */
-  /* Add other styling properties for the default frame */
-}
-
-/* Define other necessary styles for the frame */
-.frame {
-  border: 1px solid black;
-  border-radius: 10px; /* Round the border with 10px radius */
-  /* Add other common styling properties for the frame */
-  
-  /* Centering the frame */
-  position: relative;
-  align-items: center;
-  top: 50%;
-  margin-bottom: 10px; /* Add 10px space under the frame */
-}
-
-.kana {
-  font-size: 64px;
-  margin-bottom: 15px;
-}
-
-.value {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-/* CSS */
-.keyword {
-  border: 1px solid #ccc !important;
-  padding: 10px !important;
-  border-radius: 5px !important;
-  margin-bottom: 15px !important;
-  background-color: #d3f9d8 !important; /* Light green background for the definition */
-}
-
-.japanese-translation {
-  font-family: "KleeOne Semibold";
-  border: 1px solid #ccc;
-  padding: 30px 0px 10px 0px;
-  border-radius: 5px;
-  font-size: 56px;
-  border-color: black;
-  max-width: 100%;
-  background-color: #0059b3;
-}
-
-.kanji {
-  font-family: "KleeOne Semibold";
-  font-size: 64px;
-  margin-bottom: 15px;
-}
-
 .verbal-form-question {
-  margin-bottom: 5px;
   background-color: #d3f9d8; 
   font-size: 40px;
   padding: 0px;
   border-radius: 5px;
   color: black;
   border-color: black;
+}
+
+.verbal-form-question .label {
+  font-size: 30px;
 }
 
 .verbal-form-answer {
@@ -109,30 +40,6 @@
   border-color: black;
   max-width: 100%;
   background-color: #ffa64d;
-}
-
-
-.kanji .label {
-  padding-bottom: 5px; /* Spacing between label and value */
-  font-size: 40px;
-}
-
-
-.translation {
-  margin-bottom: 5px;
-  background-color: #d3f9d8; 
-  border: 1px solid #ccc;
-  padding: 0px;
-  border-radius: 5px;
-  color: black;
-  border-color: black;
-}
-
-
-.translation .label {
-  border-bottom: 1px solid #000; /* Border between Translation label and value */
-  padding-bottom: 5px; /* Spacing between label and value */
-  font-size: 20px;
 }
 
 .translation-kana {
@@ -175,256 +82,18 @@
   border-color: black;
 }
 
-.translation .label {
-  padding-bottom: 5px; /* Spacing between label and value */
-}
-
-/* .translation .value {
-padding-top: 5px;
-padding-bottom: 5px;
-font-size: 12px;
-} */
-
-
-.translation .label .question{
-  font-size: 40px;
-  padding-bottom: 0px; /* Spacing between label and value */
-}
-
-.translation .value .question{
-  font-size: 40px;
-  padding-bottom: 0px; /* Spacing between label and value */
-}
-
-
-.readings {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.reading-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.reading-table th,
-.reading-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: black; /* Black font color for table content */
-}
-
-.synonym-section {
-  background-color: #ffdddd; /* Adjusted light red background */
-  padding: 10px; /* Padding for better visibility */
-  border-radius: 5px; /* Rounded corners */
-  color: #000000; /* Enforce black font color */
-}
-
-/* Additional style for the line under the label */
-.synonym-section .synonym-label {
-  border-bottom: 1px solid #000; /* Line under the label */
-  margin-bottom: 5px; /* Space between label and value */
-  padding-bottom: 5px; /* Space between label and value */
-  font-size: 16px;
-}
-
-/* Additional style for the line under the label */
-.synonym-section .synonym-value {
-  margin-bottom: 5px; /* Space between label and value */
-  padding-bottom: 5px; /* Space between label and value */
-  font-size: 30px;
-}
-
-.reading-table .onyomi-header {
-  background-color: #fff7cc; /* Light yellow background for Onyomi header */
-}
-
-.reading-table .kunyomi-header {
-  background-color: #cfe2f3; /* Light blue background for Kunyomi header */
-}
-
-.reading-table .onyomi,
-.reading-table .kunyomi {
-  color: #fff
-}
-
-.bubble-default {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: #1f7a7a;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
-
-.bubble-verb {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: #5a2c23;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
-
-.bubble-adj {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: #b35900;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
-
-.bubble-noun {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: #002b80;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
-
-.bubble-counter {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: #3e7425;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
-
-.bubble-adverb {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: #4d1933;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
-
-.bubble-interjection {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: #09384F;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-}
-
-.highlight {
-  color: yellow;
-}
-
-.sentence {
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  background-color: #58585b; 
-  color: white;
-  border-color: black;
-  font-size: 25px;
-  text-align:left;
-  border: 1px solid #ccc;
-  padding: 12px 0px 0px 10px;
-  border-radius: 5px;
-  max-width: 100%;
-}
-
-.picture {
-  width: 100%;
-  text-align: center;
-}
-
-.picture img{
-  width: 50%;
-  margin: auto;
-  display: block;
-}
-
-
-.default-background {
-  background-color:  #1f7a7a !important; /* Light red for adjectives */
-}
-
-/* Define different background colors for different word types */
-.adj-background {
-  background-color: #b35900 !important; /* Light red for adjectives */
-}
-
-.verb-background {
-  background-color: #5a2c23 !important; /* Light blue for verbs */
-}
-
-.noun-background {
-  background-color: #002b80 !important; /* Light green for nouns */
-  
-}
-
-.counter-background {
-  background-color: #3e7425 !important; /* Light yellow for counters */
-}
-
-.adverb-background {
-  background-color: #4d1933 !important; /* Light orange for adverbs */
-}    
-
-.grammaire {
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-  margin-top: 10px;
-  background-color: #29a329; 
-  color: white;
-  border-color: black;
-  font-size: 25px;
-  text-align:center;
-  border: 1px solid #ccc;
-  padding: 5px 5px 5px 5px;
-  border-radius: 5px;
-  border-color: black;
-  max-width: 100%;
-}
-
-.answer {
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-  margin-top: 10px;
-  background-color: #666699; 
-  color: white;
-  border-color: black;
-  font-size: 25px;
-  text-align:center;
-  border: 1px solid #ccc;
-  padding: 5px 5px 5px 5px;
-  border-radius: 5px;
-  border-color: black;
-  max-width: 100%;
-}
-
 
 html, body {
   touch-action: manipulation;
 }
 
-
 .ac-front {
   touch-action: manipulation;
 }
 
-
 .example {
   font-family: arial;
   border: 1px solid #ccc;
-  padding: 30px 0px 10px 0px;
   border-radius: 5px;
   font-size: 24px;
   border-color: black;
@@ -434,6 +103,6 @@ html, body {
 
 .example .label {
   padding-bottom: 5px; /* Spacing between label and value */
-  font-size: 24px;
+  font-size: 30px;
 }
 

@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="header">Kanji </br>Onyomi</div>
+  <div class="kanji">{{Kanji}}</div>
+
+  <hr id="answer">
+
+<div class="readings">
+        <table class="reading-table">
+            <tr>
+            
+                <th class="onyomi-header">Onyomi</th>
+            </tr>
+            <tr>
+                <td class="value onyomi" id="formattedOnyomi"/>
+            </tr>
+        </table>
+    </div>
+
+  <script>
+    (function() {
+      const onyomiText = `{{onyomi}}`;
+
+      const formattedOnyomi = document.getElementById("formattedOnyomi");
+
+      // Only process if kunyomiText is not empty
+      if (onyomiText.trim()) {
+        // Split the kunyomi readings by commas and trim whitespace
+        const onyomiList = onyomiText.split(',');
+
+        // Append each reading as a new div inside formattedOnyomi
+        onyomiList.forEach(reading => {
+          const readingDiv = document.createElement("div");
+          readingDiv.className = "reading";
+          readingDiv.textContent = reading.trim();
+          formattedOnyomi.appendChild(readingDiv);
+        });
+      }
+    })();
+  </script>
+
+</div>

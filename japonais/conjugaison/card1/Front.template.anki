@@ -1,28 +1,29 @@
+<div class="card">
 <div class="verbal-form-question" id="translation">
-    <div class="label"><span class="question">{{Forme}}</span></div>
+        <div class="label"><span class="question">{{Forme}}</span></div>
 {{#neutre}}
-    <div class="value"><span class="question">{{neutre}}</span></div>
+        <div class="value"><span class="question">{{neutre}}</span></div>
 {{/neutre}}
+    </div>
 </div>
-
 
 
 <script>
 function applyStyleBasedOnTags() {
-var translationItem = document.getElementById('translation');
-var tags = '{{Tags}}'.split(" ");
+    var translationItem = document.getElementById('translation');
+    var tags = '{{Tags}}'.split(" ");
+    
+    // Check each tag and apply corresponding background color
+    tags.forEach(function(tag) {
+        if (tag === 'vb.て') {
+            translationItem.classList.add('translation-te');        } 
+				else if (tag === 'vb.neg_neutre') {
+            translationItem.classList.add('translation-neg_neutral');        }
+			else if (tag === 'adj.i') {
+            translationItem.classList.add('translation-adj_i');        }
 
-// Check each tag and apply corresponding background color
-tags.forEach(function(tag) {
-    if (tag === 'vb.て') {
-        translationItem.classList.add('translation-te');        } 
-            else if (tag === 'vb.neg_neutre') {
-        translationItem.classList.add('translation-neg_neutral');        }
-        else if (tag === 'adj.i') {
-        translationItem.classList.add('translation-adj_i');        }
-
-    // Add more conditions for other tags if needed
-});
+        // Add more conditions for other tags if needed
+    });
 }
 
 // Call the function to apply styles based on Anki tags

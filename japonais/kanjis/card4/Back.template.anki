@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="header">Kanji </br>Kunyomi</div>
+  <div class="kanji">{{Kanji}}</div>
+
+  <hr id="answer">
+
+<div class="readings">
+        <table class="reading-table">
+            <tr>
+            
+                <th class="kunyomi-header">Kunyomi</th>
+            </tr>
+            <tr>
+                <td class="value kunyomi" id="formattedKunyomi"/>
+            </tr>
+        </table>
+    </div>
+
+  <script>
+    (function() {
+      // Get the kunyomi content from Anki's template field
+      const kunyomiText = `{{kunyomi}}`;
+
+      // Select the div where kunyomi readings will be appended
+      const formattedKunyomi = document.getElementById("formattedKunyomi");
+
+      // Only process if kunyomiText is not empty
+      if (kunyomiText.trim()) {
+        // Split the kunyomi readings by commas and trim whitespace
+        const kunyomiList = kunyomiText.split(',');
+
+        // Append each reading as a new div inside formattedKunyomi
+        kunyomiList.forEach(reading => {
+          const readingDiv = document.createElement("div");
+          readingDiv.className = "reading";
+          readingDiv.textContent = reading.trim();
+          formattedKunyomi.appendChild(readingDiv);
+        });
+      }
+    })();
+  </script>
+
+</div>

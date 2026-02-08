@@ -1,12 +1,10 @@
-{{FrontSide}}
+<div class="card">
+    <div class="header">Kanji</div>
+    <div class="kanji">{{Kanji}}</div>
 
 <hr id=answer>
 
-<div class="card">
-    <div class="translation">
-        <div class="label">Traduction:</div>
-        <div class="text">{{Definition}}</div>
-    </div>
+    <div class="definition">{{Definition}}</div>
     <div class="readings">
         <table class="reading-table">
             <tr>
@@ -20,4 +18,5 @@
         </table>
     </div>
 </div>
+  
 <script defer src="_ajt_japanese.js"></script>

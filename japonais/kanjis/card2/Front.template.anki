@@ -1,4 +1,5 @@
 <div class="card">
+    <div class="header">Kanji</div>
     <div class="kanji">{{Kanji}}</div>
 </div>
 <script defer src="_ajt_japanese.js"></script>

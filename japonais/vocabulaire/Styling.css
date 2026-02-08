@@ -1,6 +1,6 @@
-@import url("_ajt_japanese_24.7.14.1.css");
+@import url("_ajt_japanese_24.10.8.1.css");
 .card {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: ';Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 4vw; /* Relative font size for responsiveness */
   line-height: 1.6;
   color: #ecf0f1; /* Light text color for contrast */
@@ -9,6 +9,11 @@
   border-radius: 2vw;
   box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.3); /* Scaled shadow for smaller screens */
   text-align: left;
+}
+
+@font-face {
+  font-family: myfont;
+  src: url("_hiragano.otf");
 }
 
 .header {
@@ -20,6 +25,7 @@
 }
 
 .furigana {
+  font-family: myfont;
   font-size: 13vw; /* Adjusted font size for furigana */
   color: #fdcb6e; /* Softer red for furigana */
   margin-bottom: 3vw;
@@ -27,11 +33,15 @@
 }
 
 .sentence {
-  font-size: 4.5vw; /* Scaled font size for sentences */
-  color: #ecf0f1; /* Light text color for sentences */
-  margin-bottom: 5vw;
-  text-align: left;
+  font-size: 4.5vw; /* Scaled font size for synonyms */
+  color: #87cefa; /* Purple for synonyms */
+  margin-top: 2vw;
+  padding: 3vw 1vw 1vw 1vw;
+  background-color: #34495e; /* Slightly lighter background for synonyms */
+  border-left: 2vw solid #87cefa; /* Scaled purple border for emphasis */
+  border-radius: 2vw;
 }
+
 
 .glossary {
   font-size: 4.5vw; /* Scaled font size for glossary definitions */
@@ -104,6 +114,23 @@
   background-color: #95a5a6;
 }
 
+ .bubble-furigana-toggle {
+  background-color: #95a5a6;
+  border-radius: 2vw;
+  font-size: 3.5vw; /* Scaled font size for bubbles */
+  color: #ecf0f1;
+  margin-bottom: 1vw;
+  gap: 2vw;
+  margin-top: 3vw;
+ position: absolute;
+    top: 30px;
+    right: 40px;
+    padding: 4px 8px;
+    color: white;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+
 hr {
   border: 0;
   height: 0.5vw;
@@ -152,4 +179,6 @@ hr {
       font-size: 4vw;
       padding: 3vw 4vw;
   }
+
+
 }
